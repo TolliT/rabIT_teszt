@@ -1,0 +1,6 @@
+RewriteEngine On
+
+DirectoryIndex view/index.php
+
+RewriteRule ^ads$ view/ads.php
+RewriteRule ^users$ view/users.php
