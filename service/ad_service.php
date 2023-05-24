@@ -22,7 +22,7 @@ class ad_service {
         }
 
         while($curr_row = $data->fetch_assoc()){
-            $curr_ad = new ad($curr_row["id"], $curr_row["userid"], $curr_row["name"], $curr_row["name"]);
+            $curr_ad = new ad($curr_row["id"], $curr_row["userid"], $curr_row["name"], $curr_row["ad_name"]);
 
             array_push($ads, $curr_ad);
         }
