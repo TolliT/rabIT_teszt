@@ -11,18 +11,18 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="buttons">
-            <h1 class="text">RabIT teszt feladat</h1>
+<div class="container">
+    <div class="buttons">
+        <h1 class="text">RabIT teszt feladat</h1>
 
-            <a href="/rabIT/users">
-                <button class="button">User lista</button>
-            </a>
-            <br>
-            <a href="/rabIT/ads">
-                <button class="button">Adv. Lista</button>
-            </a>
-        </div>
+        <a href="/rabIT/users">
+            <button class="button">User lista</button>
+        </a>
+        <br>
+        <a href="/rabIT/ads">
+            <button class="button">Adv. Lista</button>
+        </a>
     </div>
+</div>
 </body>
 </html>

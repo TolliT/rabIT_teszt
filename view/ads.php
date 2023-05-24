@@ -11,33 +11,33 @@
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-        <tr>
-            <th>AD ID</th>
-            <th>USER ID</th>
-            <th>USER NAME</th>
-            <th>AD NAME</th>
-        </tr>
-        </thead>
-        <tbody>
-            <?php
+<table>
+    <thead>
+    <tr>
+        <th>AD ID</th>
+        <th>USER ID</th>
+        <th>USER NAME</th>
+        <th>AD NAME</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
 
-            require('../controller/ad_controller.php');
+    require('../controller/ad_controller.php');
 
-            $ad_controller = new ad_controller();
-            $ad_list = $ad_controller->get_ad_list();
+    $ad_controller = new ad_controller();
+    $ad_list = $ad_controller->get_ad_list();
 
-            foreach($ad_list as $ad){
-                echo '<tr>';
-                echo '<td>' . $ad->get_id() . '</td>';
-                echo '<td>' . $ad->get_userid() . '</td>';
-                echo '<td>' . $ad->get_username() . '</td>';
-                echo '<td>' . $ad->get_adname() . '</td>';
-                echo '</tr>';
-            }
+    foreach ($ad_list as $ad) {
+        echo '<tr>';
+        echo '<td>' . $ad->get_id() . '</td>';
+        echo '<td>' . $ad->get_userid() . '</td>';
+        echo '<td>' . $ad->get_username() . '</td>';
+        echo '<td>' . $ad->get_adname() . '</td>';
+        echo '</tr>';
+    }
 
-            ?>
-        </tbody>
+    ?>
+    </tbody>
 </body>
 </html>

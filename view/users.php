@@ -11,30 +11,30 @@
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-            <th>USER ID</th>
-            <th>USER NAME</th>
-            </tr>
-        </thead>
+<table>
+    <thead>
+    <tr>
+        <th>USER ID</th>
+        <th>USER NAME</th>
+    </tr>
+    </thead>
     <tbody>
-        <?php
+    <?php
 
-        require('../controller/user_controller.php');
+    require('../controller/user_controller.php');
 
-        $user_controller = new user_controller();
-        $user_list = $user_controller->get_user_list();
+    $user_controller = new user_controller();
+    $user_list = $user_controller->get_user_list();
 
-        foreach($user_list as $user){
-            echo '<tr>';
-            echo '<td>' . $user->get_id() . '</td>';
-            echo '<td>' . $user->get_name() . '</td>';
-            echo '</tr>';
-        }
+    foreach ($user_list as $user) {
+        echo '<tr>';
+        echo '<td>' . $user->get_id() . '</td>';
+        echo '<td>' . $user->get_name() . '</td>';
+        echo '</tr>';
+    }
 
-        ?>
+    ?>
     </tbody>
-    </table>
+</table>
 </body>
 </html>

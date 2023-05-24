@@ -5,7 +5,8 @@ include "../controller/data_access/db_access.php";
 
 const USER_QUERY = "SELECT * FROM users";
 
-class user_service {
+class user_service
+{
     private $database;
 
     public function __construct()
@@ -13,15 +14,21 @@ class user_service {
         $this->database = new database();
     }
 
-    function load_user_data(){
+    /**
+     * Function responsible for loading user data from the database, called from user_controller.
+     *
+     * @return array array containing user objects with data from the database.
+     */
+    function load_user_data()
+    {
         $users = array();
         $data = $this->database->conn->query(USER_QUERY);
 
-        if(!$data){
+        if (!$data) {
             die("Failed to fetch user data from database");
         }
 
-        while($curr_row = $data->fetch_assoc()){
+        while ($curr_row = $data->fetch_assoc()) {
             $curr_user = new user($curr_row["id"], $curr_row["name"]);
 
             array_push($users, $curr_user);
